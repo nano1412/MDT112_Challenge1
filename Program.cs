@@ -10,7 +10,9 @@ namespace Challenge{
                               //roundtable();
                               //BTS();
                               //JapaneseCalendar();
-                              WarningSign(); //it's literally binary convertor
+                              //WarningSign(); //it's literally binary convertor
+                              //OnlineShopping();
+                              Doubledoor();
                     }
 
                     static void Threesome(){
@@ -118,6 +120,22 @@ namespace Challenge{
                     }
 
                     static void OnlineShopping(){
+                              int lapee_promotion = int.Parse(Console.ReadLine());
+                              int shopzada_promotion = int.Parse(Console.ReadLine());
+
+                              double lapee_price = lapee_promotion * 100;
+                              double shopzada_price = (100 * ((100 - shopzada_promotion)/100)) * (lapee_promotion + 1);
+
+                              if(lapee_price > shopzada_price){
+                                        Console.WriteLine("Shopzada");
+                              } else if(lapee_price < shopzada_price){
+                                        Console.WriteLine("Lapee");
+                              } else {
+                                        Console.WriteLine("E-mazon");
+                              }
+                    }
+
+                    static void Doubledoor(){
                               
                     }
           }
