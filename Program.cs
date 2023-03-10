@@ -12,7 +12,10 @@ namespace Challenge{
                               //JapaneseCalendar();
                               //WarningSign(); //it's literally binary convertor
                               //OnlineShopping();
-                              Doubledoor();
+                              //Doubledoor();
+                              //Hamlet();
+                              //SquareAF();
+                              //GCD();
                     }
 
                     static void Threesome(){
@@ -136,6 +139,70 @@ namespace Challenge{
                     }
 
                     static void Doubledoor(){
+                              string position = Console.ReadLine();
+
+                              switch (position[0]){
+                                        case '-':
+                                                  Console.WriteLine("Please input a positive integer.");
+                                        break;
+
+                                        case char t when t >= '0' && t <= '9':
+                                                  int number = int.Parse(position);
+
+                                                  if(number % 2 == 0){
+                                                            Console.WriteLine("{0}, {1}", number / 2, (number / 2) + 1);
+                                                  } else {
+                                                            Console.WriteLine("Please input an even positive integer.");
+                                                  }
+                                        break;
+
+                                        default:
+                                                  Console.WriteLine("Please input an integer");
+                                        break;
+                              }
+                    }
+
+                    static void Hamlet(){
+                              //1 star
+                              int number = int.Parse(Console.ReadLine());
+                              for(int i = 1;i <= number;i++){
+                                        Console.WriteLine("Hamlet");
+                              }
+                    }
+
+                    static void SquareAF(){
+                              //2 star
+                              int number = int.Parse(Console.ReadLine());
+                              Console.WriteLine("{0}", (number * ((number * number * 4) - 1)) / 3);
+                    }
+
+                    static void GCD(){
+                              int n = int.Parse(Console.ReadLine());
+                              int[] number = new int[n];
+
+                              for(int i = 0; i < n; i++){
+                                        number[i] = int.Parse(Console.ReadLine());
+                              }
+
+                              int answer;      
+                              for(int j = 0; j < n; j++){
+                                        while(number[j] != 0 && number[j+1] != 0){
+                                                  if(number[j + 1] == 0){
+                                                            number[j] = number[j + 1];
+                                                  }
+                                                  
+                                                  if(number[j] > number[j+1]){
+                                                            number[j] %= number[j+1];
+                                                  } else {
+                                                            number[j+1] %= number[j];
+                                                  }      
+                                        }
+                              }
+                              if(number[n - 1] == 0){
+                                        Console.WriteLine("{0}", number[n - 2]);
+                              } else {
+                                        Console.WriteLine("{0}", number[n - 1]);
+                              }
                               
                     }
           }
