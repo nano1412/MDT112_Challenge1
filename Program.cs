@@ -3,24 +3,24 @@
 namespace Challenge{
           class Program{
                     static void Main(string[] args){
-                              //Threesome();
-                              //IsItTooMuch();
-                              //TwoPowerOfn();
-                              //absolute();
-                              //roundtable();
-                              //BTS();
-                              //JapaneseCalendar();
-                              //WarningSign(); //it's literally binary convertor
-                              //OnlineShopping();
-                              //Doubledoor();
-                              //Hamlet();
-                              //SquareAF();
-                              //GCD();
-                              //Triangle();
-                              RetiredYear();
+                              Threesome_01();                //No.01 ★
+                              IsItTooMuch_02();              //No.02 ★
+                              TwoPowerOfn_03();              //No.03 ★★☆
+                              absolute_04();                 //No.04 ★★☆
+                              roundtable_05();               //No.05 ★☆
+                              BTS_06();                      //No.06 ★
+                              JapaneseCalendar_07();         //No.07 ★★★
+                              WarningSign_08();              //No.08 ★★*
+                              OnlineShopping_09();           //No.09 ★
+                              Doubledoor_10();               //No.10 ★
+                              Hamlet_11();                   //No.11 ★☆
+                              SquareAF_12();                 //No.12 ★★
+                              GCD_13();                      //No.13 ★★☆
+                              Triangle_14();                 //No.14 ★
+                              RetiredYear_15();              //No.15 ★
                     }
 
-                    static void Threesome(){
+                    static void Threesome_01(){
                               Console.Write("Please input number 1:");
                               int number1 = int.Parse(Console.ReadLine());
                               Console.Write("Please input number 2:");
@@ -31,7 +31,7 @@ namespace Challenge{
                               Console.Write("Sum: {0}",number1 + number2 + number3);
                     }
 
-                    static void IsItTooMuch(){
+                    static void IsItTooMuch_02(){
                               double a = double.Parse(Console.ReadLine());
                               double b = double.Parse(Console.ReadLine());
                               double x = double.Parse(Console.ReadLine());
@@ -40,19 +40,19 @@ namespace Challenge{
                               else{Console.Write("False");}
                     }
 
-                    static void TwoPowerOfn(){
+                    static void TwoPowerOfn_03(){
                               //2 stars
                               int n = int.Parse(Console.ReadLine());
                               Console.WriteLine("{0}", Math.Pow(2,n));
                     }
 
-                    static void absolute(){
+                    static void absolute_04(){
                               //2 stars
                               int x = int.Parse(Console.ReadLine());
                               Console.WriteLine("{0}", Math.Abs(x));
                     }
 
-                    static void roundtable(){
+                    static void roundtable_05(){
                               //1 star
                               int x = int.Parse(Console.ReadLine());
                               for(int i = 0; i < 4; i++){
@@ -62,7 +62,7 @@ namespace Challenge{
                               }
                     }
 
-                    static void BTS(){
+                    static void BTS_06(){
                               Console.Write("Please input a number of stations:");
                               int station = int.Parse(Console.ReadLine());
                               int price = 16;
@@ -84,7 +84,7 @@ namespace Challenge{
                               Console.WriteLine("Cost (THB): {0}", price);
                     }
 
-                    static void JapaneseCalendar(){
+                    static void JapaneseCalendar_07(){
                               //3 stars
                               int year = int.Parse(Console.ReadLine());
                               int month = int.Parse(Console.ReadLine());
@@ -111,7 +111,7 @@ namespace Challenge{
                               }
                     }
 
-                    static void WarningSign(){
+                    static void WarningSign_08(){
                               //2 stars with error lol
                               int signal = int.Parse(Console.ReadLine());
 
@@ -124,7 +124,7 @@ namespace Challenge{
                               if(reversedbinary[2] == '1'){Console.WriteLine("red");}
                     }
 
-                    static void OnlineShopping(){
+                    static void OnlineShopping_09(){
                               int lapee_promotion = int.Parse(Console.ReadLine());
                               int shopzada_promotion = int.Parse(Console.ReadLine());
 
@@ -140,7 +140,7 @@ namespace Challenge{
                               }
                     }
 
-                    static void Doubledoor(){
+                    static void Doubledoor_10(){
                               string position = Console.ReadLine();
 
                               switch (position[0]){
@@ -164,7 +164,7 @@ namespace Challenge{
                               }
                     }
 
-                    static void Hamlet(){
+                    static void Hamlet_11(){
                               //1 star
                               int number = int.Parse(Console.ReadLine());
                               for(int i = 1;i <= number;i++){
@@ -172,13 +172,14 @@ namespace Challenge{
                               }
                     }
 
-                    static void SquareAF(){
+                    static void SquareAF_12(){
                               //2 star
                               int number = int.Parse(Console.ReadLine());
                               Console.WriteLine("{0}", (number * ((number * number * 4) - 1)) / 3);
                     }
 
-                    static void GCD(){
+                    static void GCD_13(){
+                              //2 star
                               int n = int.Parse(Console.ReadLine());
                               int[] number = new int[n];
 
@@ -208,7 +209,7 @@ namespace Challenge{
                               
                     }
 
-                    static void Triangle(){
+                    static void Triangle_14(){
                               int height = int.Parse(Console.ReadLine());
                               height--;
                               for(int i = 0; i < height; i++){
@@ -229,7 +230,7 @@ namespace Challenge{
                               }
                     }
 
-                    static void RetiredYear(){
+                    static void RetiredYear_15(){
                               string job = "";
                               string job_first = "";
 
