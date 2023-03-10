@@ -16,6 +16,8 @@ namespace Challenge{
                               //Hamlet();
                               //SquareAF();
                               //GCD();
+                              //Triangle();
+                              RetiredYear();
                     }
 
                     static void Threesome(){
@@ -204,6 +206,53 @@ namespace Challenge{
                                         Console.WriteLine("{0}", number[n - 1]);
                               }
                               
+                    }
+
+                    static void Triangle(){
+                              int height = int.Parse(Console.ReadLine());
+                              height--;
+                              for(int i = 0; i < height; i++){
+                                        for(int j = height; j > i; j--){
+                                                  Console.Write(" ");     
+                                        }
+                                        if(i > 0){
+                                                  Console.Write("*");
+                                        }
+                                        
+                                        for(int k = 0;k < (i*2)-1;k++){        
+                                                  Console.Write(" ");     
+                                        }
+                                        Console.WriteLine("*"); 
+                              }
+                              for(int i = 0; i < (height * 2)+1;i++){
+                                        Console.Write("*");
+                              }
+                    }
+
+                    static void RetiredYear(){
+                              string job = "";
+                              string job_first = "";
+
+                              int year = 0;
+                              int year_first = 2565;
+                              int year_diff = 0;
+
+                              while(year != 2565){
+                                        job = Console.ReadLine();
+                                        year = int.Parse(Console.ReadLine());
+
+                                        if(year < year_first){
+                                                  year_first = year;
+                                                  job_first = job;
+                                        }
+                              }
+                              year_diff = 2566 - year_first;
+
+                              Console.WriteLine("{0}",job_first);
+                              Console.WriteLine("{0}",year_first);
+                              Console.WriteLine("{0}",job);
+                              Console.WriteLine("2565");
+                              Console.WriteLine("{0}",year_diff);
                     }
           }
 }
