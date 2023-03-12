@@ -21,7 +21,7 @@ namespace Challenge{
                               // BTS_06_1of1();                //No.06 ★
                               // BTS_06_3if();                 //No.06 ★ with 3 if
 
-                              JapaneseCalendar_07_3of3();   //No.07 ★★★
+                              // JapaneseCalendar_07_3of3();   //No.07 ★★★
 
                               // WarningSign_08_2of2();        //No.08 ★★
 
@@ -171,7 +171,7 @@ namespace Challenge{
                                         (year % 4 == 0 && month == 2 && day <= 29)
                               ){
                                         Console.WriteLine("is real day");
-                                        /*if((year == 1912 && month == 7 && day <= 29) || (year == 1912 && month < 7) || year < 1912){
+                                        if((year == 1912 && month == 7 && day <= 29) || (year == 1912 && month < 7) || year < 1912){
                                                   Console.WriteLine("明治 meji");
                                         }
 
@@ -189,7 +189,7 @@ namespace Challenge{
 
                                         if((year == 2019 && month == 4 && day > 30) || (year == 2019 && month >= 4) || year > 2019){
                                                   Console.WriteLine("令和 Reiwa");
-                                        }*/
+                                        }
                               }
                     }
 
