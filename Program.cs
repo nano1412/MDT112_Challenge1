@@ -56,13 +56,15 @@ namespace Challenge{
                               double b = double.Parse(Console.ReadLine());
                               double x = double.Parse(Console.ReadLine());
 
-                              if(x >= a && x <= b){Console.Write("True");}
-                              else{Console.Write("False");}
+                              if(x >= a && x <= b){Console.WriteLine("True");}
+                              else{Console.WriteLine("False");}
                     }
 
                     static void TwoPowerOfn_03_1of3(){
+                              //1 star
                               int n = int.Parse(Console.ReadLine());
                               int answer = 2;
+
                               while(n > 1){
                                         answer = answer * 2;
                                         n--;
@@ -73,6 +75,7 @@ namespace Challenge{
                     static void TwoPowerOfn_03_2of3(){
                               //2 stars
                               int n = int.Parse(Console.ReadLine());
+
                               Console.WriteLine(Math.Pow(2,n));
                     }
 
@@ -80,6 +83,7 @@ namespace Challenge{
                               //3 stars
                               int n = int.Parse(Console.ReadLine());
                               int answer = 1;
+
                               answer = answer << n;
                               Console.WriteLine(answer);
                     }
@@ -87,6 +91,7 @@ namespace Challenge{
                     static void absolute_04_1of3(){
                               //1 star
                               int x = int.Parse(Console.ReadLine());
+
                               if(x < 0){
                                         x = -x;
                               }
@@ -96,18 +101,21 @@ namespace Challenge{
                     static void absolute_04_2of3(){
                               //2 stars
                               int x = int.Parse(Console.ReadLine());
+
                               Console.WriteLine(Math.Abs(x));
                     }
 
                     static void absolute_04_3of3(){
                               //3 stars
                               int x = int.Parse(Console.ReadLine());
+
                               Console.WriteLine((x ^ (x >> 31)) - (x >> 31));
                     }
 
                     static void roundtable_05_1of2(){
                               //1 star
                               int x = int.Parse(Console.ReadLine());
+
                               for(int i = 0; i < 4; i++){
                                         x++;
                                         if(x > 8){x = 1;}
@@ -119,10 +127,10 @@ namespace Challenge{
                               //2 stars
                               int x = int.Parse(Console.ReadLine());
 
-                              Console.WriteLine(((x++) % 8)+1);
-                              Console.WriteLine(((x++) % 8)+1);
-                              Console.WriteLine(((x++) % 8)+1);
-                              Console.WriteLine(((x++) % 8)+1);
+                              Console.WriteLine(((x++) % 8) + 1);
+                              Console.WriteLine(((x++) % 8) + 1);
+                              Console.WriteLine(((x++) % 8) + 1);
+                              Console.WriteLine(((x++) % 8) + 1);
                     }
 
                     static void BTS_06_1of1(){
@@ -164,12 +172,7 @@ namespace Challenge{
                               int month = int.Parse(Console.ReadLine());
                               int day = int.Parse(Console.ReadLine());
 
-                              if(
-                                        ((month == 1 || month == 3 || month == 5 || month == 7 || month == 8 || month == 10 || month == 12) && day <=31) ||
-                                        ((month == 4 && month == 6 && month == 9 && month == 11) && day <= 30) ||
-                                        (month == 2 && day <= 28) || 
-                                        (year % 4 == 0 && month == 2 && day <= 29)
-                              ){
+                              if(((month == 1 || month == 3 || month == 5 || month == 7 || month == 8 || month == 10 || month == 12) && day <=31) || ((month == 4 && month == 6 && month == 9 && month == 11) && day <= 30) || (month == 2 && day <= 28) || (year % 4 == 0 && month == 2 && day <= 29)){
                                         Console.WriteLine("is real day");
                                         if((year == 1912 && month == 7 && day <= 29) || (year == 1912 && month < 7) || year < 1912){
                                                   Console.WriteLine("明治 meji");
@@ -211,7 +214,7 @@ namespace Challenge{
                               int shopzada_promotion = int.Parse(Console.ReadLine());
 
                               double lapee_price = lapee_promotion * 100;
-                              double shopzada_price = (100 * ((100 - shopzada_promotion)/100)) * (lapee_promotion + 1);
+                              double shopzada_price = (100 * ((100 - shopzada_promotion) / 100)) * (lapee_promotion + 1);
 
                               if(lapee_price > shopzada_price){
                                         Console.WriteLine("Shopzada");
@@ -249,6 +252,7 @@ namespace Challenge{
                     static void Hamlet_11_1of2(){
                               //1 star
                               int number = int.Parse(Console.ReadLine());
+
                               for(int i = 1;i <= number;i++){
                                         Console.WriteLine("Hamlet");
                               }
@@ -257,19 +261,19 @@ namespace Challenge{
                     static void SquareAF_12_2of2(){
                               //2 star
                               int number = int.Parse(Console.ReadLine());
+
                               Console.WriteLine("{0}", (number * ((number * number * 4) - 1)) / 3);
                     }
 
                     static void GCD_13_2of3(){
                               //2 star
                               int n = int.Parse(Console.ReadLine());
-                              int[] number = new int[n];
+                              int[] number = new int[n];     
 
                               for(int i = 0; i < n; i++){
                                         number[i] = int.Parse(Console.ReadLine());
                               }
 
-                              int answer;      
                               for(int j = 0; j < n; j++){
                                         while(number[j] != 0 && number[j+1] != 0){
                                                   if(number[j + 1] == 0){
