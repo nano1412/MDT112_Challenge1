@@ -3,41 +3,41 @@
 namespace Challenge{
           class Program{
                     static void Main(string[] args){
-                              Threesome_01_1of1();          //No.01 ★
+                              // Threesome_01_1of1();          //No.01 ★
 
-                              IsItTooMuch_02_1of1();        //No.02 ★
+                              // IsItTooMuch_02_1of1();        //No.02 ★
 
-                              TwoPowerOfn_03_1of3();        //No.03 ★☆☆
-                              TwoPowerOfn_03_2of3();        //No.03 ★★☆
-                              TwoPowerOfn_03_3of3();        //No.03 ★★★
+                              // TwoPowerOfn_03_1of3();        //No.03 ★☆☆
+                              // TwoPowerOfn_03_2of3();        //No.03 ★★☆
+                              // TwoPowerOfn_03_3of3();        //No.03 ★★★
 
-                              absolute_04_1of3();           //N0.04 ★☆☆
-                              absolute_04_2of3();           //No.04 ★★☆
-                              absolute_04_3of3();           //No.04 ★★★
+                              // absolute_04_1of3();           //N0.04 ★☆☆
+                              // absolute_04_2of3();           //No.04 ★★☆
+                              // absolute_04_3of3();           //No.04 ★★★
 
-                              roundtable_05_1of2();         //No.05 ★☆
-                              roundtable_05_2of2();         //No.05 ★★
+                              // roundtable_05_1of2();         //No.05 ★☆
+                              // roundtable_05_2of2();         //No.05 ★★
 
-                              BTS_06_1of1();                //No.06 ★
-                              BTS_06_3if();                 //No.06 ★ with 3 if
+                              // BTS_06_1of1();                //No.06 ★
+                              // BTS_06_3if();                 //No.06 ★ with 3 if
 
                               JapaneseCalendar_07_3of3();   //No.07 ★★★
 
-                              WarningSign_08_2of2();        //No.08 ★★
+                              // WarningSign_08_2of2();        //No.08 ★★
 
-                              OnlineShopping_09_1of1();     //No.09 ★
+                              // OnlineShopping_09_1of1();     //No.09 ★
 
-                              Doubledoor_10_1of1();         //No.10 ★
+                              // Doubledoor_10_1of1();         //No.10 ★
 
-                              Hamlet_11_1of2();             //No.11 ★☆
+                              // Hamlet_11_1of2();             //No.11 ★☆
 
-                              SquareAF_12_2of2();           //No.12 ★★
+                              // SquareAF_12_2of2();           //No.12 ★★
 
-                              GCD_13_2of3();                //No.13 ★★☆
+                              // GCD_13_2of3();                //No.13 ★★☆
 
-                              Triangle_14_1of1();           //No.14 ★
+                              // Triangle_14_1of1();           //No.14 ★
 
-                              RetiredYear_15_1of1();        //No.15 ★
+                              // RetiredYear_15_1of1();        //No.15 ★
                     }
 
                     static void Threesome_01_1of1(){
@@ -164,24 +164,32 @@ namespace Challenge{
                               int month = int.Parse(Console.ReadLine());
                               int day = int.Parse(Console.ReadLine());
 
-                              if((year == 1912 && month == 7 && day <= 29) || (year == 1912 && month < 7) || year < 1912){
-                                        Console.WriteLine("明治 meji");
-                              }
+                              if(
+                                        ((month == 1 || month == 3 || month == 5 || month == 7 || month == 8 || month == 10 || month == 12) && day <=31) ||
+                                        ((month == 4 && month == 6 && month == 9 && month == 11) && day <= 30) ||
+                                        (month == 2 && day <= 28) || 
+                                        (year % 4 == 0 && month == 2 && day <= 29)
+                              ){
+                                        Console.WriteLine("is real day");
+                                        /*if((year == 1912 && month == 7 && day <= 29) || (year == 1912 && month < 7) || year < 1912){
+                                                  Console.WriteLine("明治 meji");
+                                        }
 
-                              if(((year == 1912 && month == 7 && day > 29) || (year == 1912 && month >= 7) || year > 1912) && ((year == 1926 && month == 12 && day <= 24) || (year == 1926 && month < 12) || year < 1926)){
-                                        Console.WriteLine("大正 Taisho");
-                              }
+                                        if(((year == 1912 && month == 7 && day > 29) || (year == 1912 && month >= 7) || year > 1912) && ((year == 1926 && month == 12 && day <= 24) || (year == 1926 && month < 12) || year < 1926)){
+                                                  Console.WriteLine("大正 Taisho");
+                                        }
 
-                              if(((year == 1926 && month == 12 && day > 24) || (year == 1926 && month >= 12) || year > 1926) && ((year == 1989 && month == 1 && day <= 7) || (year == 1989 && month < 1) || year < 1989)){
-                                        Console.WriteLine("昭和 Showa");
-                              }
+                                        if(((year == 1926 && month == 12 && day > 24) || (year == 1926 && month >= 12) || year > 1926) && ((year == 1989 && month == 1 && day <= 7) || (year == 1989 && month < 1) || year < 1989)){
+                                                  Console.WriteLine("昭和 Showa");
+                                        }
 
-                              if(((year == 1989 && month == 1 && day > 7) || (year == 1989 && month >= 1) || year > 1989) && ((year == 2019 && month == 4 && day <= 30) || (year == 2019 && month < 4) || year < 2019)){
-                                        Console.WriteLine("平成 Heisei");
-                              }
+                                        if(((year == 1989 && month == 1 && day > 7) || (year == 1989 && month >= 1) || year > 1989) && ((year == 2019 && month == 4 && day <= 30) || (year == 2019 && month < 4) || year < 2019)){
+                                                  Console.WriteLine("平成 Heisei");
+                                        }
 
-                              if((year == 2019 && month == 4 && day > 30) || (year == 2019 && month >= 4) || year > 2019){
-                                        Console.WriteLine("令和 Reiwa");
+                                        if((year == 2019 && month == 4 && day > 30) || (year == 2019 && month >= 4) || year > 2019){
+                                                  Console.WriteLine("令和 Reiwa");
+                                        }*/
                               }
                     }
 
